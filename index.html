@@ -55,12 +55,12 @@
             <div class="section-header">
                 <h2 class="section-title">Наши услуги</h2>
                 <div class="section-arrows">
-                    <button class="arrow-btn arrow-btn--prev">
+                    <button class="arrow-btn arrow-btn--prev" id="services-prev">
                         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
                             <path d="M8 1L1 9L8 17" stroke="#F9F9F9" stroke-width="3" />
                         </svg>
                     </button>
-                    <button class="arrow-btn arrow-btn--next">
+                    <button class="arrow-btn arrow-btn--next" id="services-next">
                         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
                             <path d="M1 17L8 9L1 1" stroke="#F9F9F9" stroke-width="3" />
                         </svg>
@@ -68,29 +68,78 @@
                 </div>
             </div>
 
-            <div class="services__grid">
-                <div class="service-card">
-                    <div class="service-card__image service-card__image--1"></div>
-                    <div class="service-card__content">
-                        <h3 class="service-card__title">Проектирование</h3>
-                        <p class="service-card__text">Индивидуальная архитектура, удобная планировка, учёт особенностей
-                            участка</p>
-                    </div>
-                </div>
+            <div class="services__slider">
+                <div class="services__track">
+                    <!-- Слайд 1 -->
+                    <div class="services__slide">
+                        <div class="services__grid">
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--1"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Проектирование</h3>
+                                    <p class="service-card__text">Индивидуальная архитектура, удобная планировка, учёт особенностей
+                                        участка</p>
+                                </div>
+                            </div>
 
-                <div class="service-card">
-                    <div class="service-card__image service-card__image--2"></div>
-                    <div class="service-card__content">
-                        <h3 class="service-card__title">Строительство</h3>
-                        <p class="service-card__text">Фундамент , стены, кровля, внутренние<br>и наружные работы</p>
-                    </div>
-                </div>
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--2"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Строительство</h3>
+                                    <p class="service-card__text">Фундамент , стены, кровля, внутренние<br>и наружные работы</p>
+                                </div>
+                            </div>
 
-                <div class="service-card">
-                    <div class="service-card__image service-card__image--3"></div>
-                    <div class="service-card__content">
-                        <h3 class="service-card__title">Инженерия</h3>
-                        <p class="service-card__text">Электрика, водоснабжение, отопление, вентиляция, умные системы</p>
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--3"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Инженерия</h3>
+                                    <p class="service-card__text">Электрика, водоснабжение, отопление, вентиляция, умные системы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="services__slide">
+                        <div class="services__grid">
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--4"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Отделка</h3>
+                                    <p class="service-card__text">Чистовые материалы, интерьер,<br>готовность к проживанию</p>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--5"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Меблировка</h3>
+                                    <p class="service-card__text">Подбор и установка мебели<br>и оборудования</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="services__slide">
+                        <div class="services__grid">
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--6"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Работы по участку</h3>
+                                    <p class="service-card__text">Вспомогательные постройки, забор, гараж, бассейн и прочее</p>
+                                </div>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-card__image service-card__image--7"></div>
+                                <div class="service-card__content">
+                                    <h3 class="service-card__title">Ландшафт</h3>
+                                    <p class="service-card__text">Газоны, дорожки, деревья, сад, зоны отдыха и релаксации</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,12 +152,12 @@
             <div class="section-header">
                 <h2 class="section-title">реализованные проекты</h2>
                 <div class="section-arrows">
-                    <button class="arrow-btn arrow-btn--prev">
+                    <button class="arrow-btn arrow-btn--prev" id="projects-prev">
                         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
                             <path d="M8 1L1 9L8 17" stroke="#F9F9F9" stroke-width="3" />
                         </svg>
                     </button>
-                    <button class="arrow-btn arrow-btn--next">
+                    <button class="arrow-btn arrow-btn--next" id="projects-next">
                         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
                             <path d="M1 17L8 9L1 1" stroke="#F9F9F9" stroke-width="3" />
                         </svg>
@@ -116,9 +165,146 @@
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-card__image"></div>
-                <h3 class="project-card__title">ДОМ В АНГЛИЙСКОМ СТИЛЕ</h3>
+            <div class="projects__slider">
+                <div class="projects__track">
+                    <!-- Проект 1 -->
+                    <div class="projects__slide">
+                        <div class="project-card">
+                            <div class="project-card__image project-card__image--1"></div>
+                            <h3 class="project-card__title">ДОМ В АНГЛИЙСКОМ СТИЛЕ</h3>
+                            
+                            <div class="project-card__details">
+                                <div class="project-card__details-content">
+                                    <h3 class="project-card__details-title">Дом в английском стиле</h3>
+                                    <div class="project-card__details-info">
+                                        <div class="project-card__details-column">
+                                            <p><strong>1. Общие характеристики</strong></p>
+                                            <p>Дом площадью 350 м²<br>
+                                            2 этажа<br>
+                                            Стиль: Классика<br>
+                                            Отделка стен: газобетон с утеплением<br>
+                                            Отделка: облицовочный кирпич</p>
+                                            
+                                            <p><strong>2. Фундамент и конструкции</strong></p>
+                                            <p>Фундамент: монолит<br>
+                                            Перекрытия: монолит<br>
+                                            Стены: газобетон + утеплитель<br>
+                                            Кровля: натуральная черепица</p>
+                                            
+                                            <p><strong>3. Участок и благоустройство</strong></p>
+                                            <p>Крытая парковка на 2 авто в едином стиле<br>
+                                            Кровля — натуральная черепица<br>
+                                            Облицовка — тот же кирпич</p>
+                                        </div>
+                                        <div class="project-card__details-column">
+                                            <p><strong>4. Мощение и благоустройство территории</strong></p>
+                                            <p>Бассейн<br>
+                                            Хозяйственное здание 6×3 м под персонал и оборудование:<br>
+                                            Кровля — натуральная черепица<br>
+                                            Облицовка — тот же кирпич<br>
+                                            Назначение: для персонала + фильтрационное оборудование</p>
+                                            
+                                            <p><strong>5. Ограждение</strong></p>
+                                            <p>Кирпичный забор<br>
+                                            Откатные ворота шириной 4.5 м<br>
+                                            Ленточный фундамент</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 2 -->
+                    <div class="projects__slide">
+                        <div class="project-card">
+                            <div class="project-card__image project-card__image--2"></div>
+                            <h3 class="project-card__title">ДЕРЕВЯННЫЕ ДОМА<br>С ГОСТЕВЫМ КОМПЛЕКСОМ</h3>
+                            
+                            <div class="project-card__details">
+                                <div class="project-card__details-content">
+                                    <h3 class="project-card__details-title">Деревянные дома<br>с гостевым комплексом</h3>
+                                    <div class="project-card__details-info">
+                                        <div class="project-card__details-column">
+                                            <p><strong>1. Общие характеристики</strong></p>
+                                            <p>Построены два идентичных двухэтажных дома<br>
+                                            площадь 180 м²</p>
+                                            
+                                            <p><strong>2. Фундамент и конструкции</strong></p>
+                                            <p>Фундамент: монолитная плита<br>
+                                            Стены: окрашенный на заводе брус<br>
+                                            Кровля: мягкая черепица</p>
+                                            
+                                            <p><strong>3. Ограждение</strong></p>
+                                            <p>Забор с автоматическими воротами с обеих сторон участка</p>
+                                        </div>
+                                        <div class="project-card__details-column">
+                                            <p><strong>4. Участок и благоустройство</strong></p>
+                                            <p>Навес на 2 авто с технической пристройкой<br>
+                                            Кровля — натуральная черепица<br>
+                                            Облицовка — тот же кирпич<br><br>
+                                            Закрытый бассейн 10×16 м с сауной, котельной, санузлом<br>
+                                            и остеклением в пол<br><br>
+                                            Бильярдная 6×10 м с кухней, столовой зоной и санузлом<br><br>
+                                            Обе постройки — каркасные, с тёплыми полами<br>
+                                            и единым стилем отделки<br><br>
+                                            Завершено благоустройство:<br>
+                                            мощение, дренаж, мангальная зона и проект озеленения</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Проект 3 -->
+                    <div class="projects__slide">
+                        <div class="project-card">
+                            <div class="project-card__image project-card__image--3"></div>
+                            <h3 class="project-card__title">ДОМ С ГАРАЖОМ<br>В СТИЛЕ СОВРЕМЕННОЙ ЭКЛЕКТИКИ</h3>
+                            
+                            <div class="project-card__details">
+                                <div class="project-card__details-content">
+                                    <h3 class="project-card__details-title">Дом с гаражом<br>в стиле современной эклектики</h3>
+                                    <div class="project-card__details-info">
+                                        <div class="project-card__details-column">
+                                            <p><strong>1. Общие характеристики</strong></p>
+                                            <p>Современный двухэтажный дом площадью 300-350 м²<br>
+                                            в посёлке Репино Парк</p>
+                                            
+                                            <p><strong>2. Фундамент и конструкции</strong></p>
+                                            <p>Фундамент: монолитная плита<br>
+                                            Стены: газобетон<br>
+                                            Кровля: натуральная черепица<br>
+                                            Наружная отделка: натуральный камень и дерево<br>
+                                            Деревянный планкен под 45°</p>
+                                            
+                                            <p><strong>3. Планировка и отделка</strong></p>
+                                            <p>Дубовая лестница, отделка планкеном, тёплые натуральные<br>
+                                            материалы с элементами этнического стиля</p>
+                                        </div>
+                                        <div class="project-card__details-column">
+                                            <p><strong>4. Участок и благоустройство</strong></p>
+                                            <p>Встроенный гараж на 2 авто<br>
+                                            Сауна<br>
+                                            Котельная на магистральном газе<br>
+                                            Постирочная<br>
+                                            Система антиобледенения въезда с греющим кабелем<br>
+                                            под откатными воротами<br>
+                                            Выполнено мощение и дренаж<br>
+                                            Проектируется декоративное озеленение<br>
+                                            Хозяйственное здание в общем стиле</p>
+                                            
+                                            <p><strong>5. Ограждение</strong></p>
+                                            <p>Забором с кирпичными столбами<br>
+                                            и автоматическими воротами</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -203,6 +389,96 @@
                 }
             });
         });
+
+        // Слайдер услуг
+        const servicesTrack = document.querySelector('.services__track');
+        const servicesPrevBtn = document.getElementById('services-prev');
+        const servicesNextBtn = document.getElementById('services-next');
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function updateSlider() {
+            servicesTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Обновляем состояние кнопок
+            servicesPrevBtn.disabled = currentSlide === 0;
+            servicesNextBtn.disabled = currentSlide === totalSlides - 1;
+            
+            // Добавляем визуальную индикацию для отключенных кнопок
+            if (currentSlide === 0) {
+                servicesPrevBtn.style.opacity = '0.5';
+            } else {
+                servicesPrevBtn.style.opacity = '1';
+            }
+            
+            if (currentSlide === totalSlides - 1) {
+                servicesNextBtn.style.opacity = '0.5';
+            } else {
+                servicesNextBtn.style.opacity = '1';
+            }
+        }
+
+        servicesPrevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        });
+
+        servicesNextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        });
+
+        // Инициализация слайдера
+        updateSlider();
+
+        // Слайдер проектов
+        const projectsTrack = document.querySelector('.projects__track');
+        const projectsPrevBtn = document.getElementById('projects-prev');
+        const projectsNextBtn = document.getElementById('projects-next');
+        let currentProjectSlide = 0;
+        const totalProjectSlides = 3;
+
+        function updateProjectsSlider() {
+            projectsTrack.style.transform = `translateX(-${currentProjectSlide * 100}%)`;
+            
+            // Обновляем состояние кнопок
+            projectsPrevBtn.disabled = currentProjectSlide === 0;
+            projectsNextBtn.disabled = currentProjectSlide === totalProjectSlides - 1;
+            
+            // Добавляем визуальную индикацию для отключенных кнопок
+            if (currentProjectSlide === 0) {
+                projectsPrevBtn.style.opacity = '0.5';
+            } else {
+                projectsPrevBtn.style.opacity = '1';
+            }
+            
+            if (currentProjectSlide === totalProjectSlides - 1) {
+                projectsNextBtn.style.opacity = '0.5';
+            } else {
+                projectsNextBtn.style.opacity = '1';
+            }
+        }
+
+        projectsPrevBtn.addEventListener('click', () => {
+            if (currentProjectSlide > 0) {
+                currentProjectSlide--;
+                updateProjectsSlider();
+            }
+        });
+
+        projectsNextBtn.addEventListener('click', () => {
+            if (currentProjectSlide < totalProjectSlides - 1) {
+                currentProjectSlide++;
+                updateProjectsSlider();
+            }
+        });
+
+        // Инициализация слайдера проектов
+        updateProjectsSlider();
     </script>
 </body>
 

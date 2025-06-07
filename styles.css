@@ -209,6 +209,14 @@ ul {
     background: #3a5a50;
 }
 
+.arrow-btn:disabled {
+    cursor: not-allowed;
+}
+
+.arrow-btn:disabled:hover {
+    background: #4C7767;
+}
+
 /* Услуги */
 .services__grid {
     display: grid;
@@ -216,6 +224,22 @@ ul {
     grid-template-rows: 400px 400px;
     gap: 32px;
     max-width: 1761px;
+}
+
+/* Слайдер услуг */
+.services__slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.services__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.services__slide {
+    min-width: 100%;
+    flex-shrink: 0;
 }
 
 .service-card {
@@ -247,6 +271,26 @@ ul {
 .service-card__image--3 {
     background-image: url('img/service-3.png');
     height: 400px;
+}
+
+.service-card__image--4 {
+    background-image: url('img/service-4.png');
+    height: 832px;
+}
+
+.service-card__image--5 {
+    background-image: url('img/service-5.png');
+    height: 832px;
+}
+
+.service-card__image--6 {
+    background-image: url('img/service-6.png');
+    height: 832px;
+}
+
+.service-card__image--7 {
+    background-image: url('img/service-7.png');
+    height: 832px;
 }
 
 .service-card__content {
@@ -288,6 +332,21 @@ ul {
 }
 
 /* Проекты */
+.projects__slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.projects__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.projects__slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
 .project-card {
     position: relative;
     height: 850px;
@@ -298,8 +357,22 @@ ul {
 .project-card__image {
     width: 100%;
     height: 100%;
-    background: url('img/project-1.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
+    transition: transform 0.5s ease;
+}
+
+.project-card__image--1 {
+    background-image: url('img/project-1.png');
+}
+
+.project-card__image--2 {
+    background-image: url('img/project-2.png');
+}
+
+.project-card__image--3 {
+    background-image: url('img/project-3.png');
 }
 
 .project-card__image::after {
@@ -322,13 +395,85 @@ ul {
     position: absolute;
     bottom: 50px;
     left: 50px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'title', serif;
     font-size: 64px;
     font-weight: 500;
     color: #EDEDED;
     line-height: 1.27;
     text-transform: uppercase;
     z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+/* Детальная информация при наведении */
+.project-card__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.8) 1.28%,
+        rgba(6, 9, 4, 0.5) 49.16%,
+        rgba(11, 18, 8, 0.8) 100%
+    );
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    z-index: 3;
+}
+
+.project-card:hover .project-card__details {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-card:hover .project-card__image {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-card__title {
+    opacity: 0;
+}
+
+.project-card__details-content {
+    width: 100%;
+    max-width: 1660px;
+}
+
+.project-card__details-title {
+    font-family: 'title', serif;
+    font-size: 64px;
+    font-weight: 500;
+    color: #EDEDED;
+    line-height: 1.27;
+    margin-bottom: 60px;
+}
+
+.project-card__details-info {
+    display: flex;
+    gap: 88px;
+    color: #FFFFFF;
+}
+
+.project-card__details-column {
+    flex: 1;
+}
+
+.project-card__details-column p {
+    font-size: 22px;
+    line-height: 1.22;
+    margin-bottom: 20px;
+}
+
+.project-card__details-column p strong {
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* О нас */
