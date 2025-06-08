@@ -385,9 +385,53 @@
         const servicesPrevBtn = document.getElementById('services-prev');
         const servicesNextBtn = document.getElementById('services-next');
         let currentSlide = 0;
-        const totalSlides = 3;
+        let totalSlides = 3; // Значение по умолчанию для десктопной версии
+        let servicesSlideWidth = 100; // В процентах по умолчанию
+
+        function checkServicesSliderMode() {
+            // Проверяем текущую ширину экрана
+            if (window.innerWidth <= 960) {
+                // Для разрешения 960px и меньше используем 7 отдельных слайдов
+                totalSlides = 7;
+                
+                // Получаем все карточки услуг
+                const serviceCards = document.querySelectorAll('.service-card');
+                
+                // Если ещё не преобразованы в отдельные слайды
+                if (document.querySelector('.services__slide .services__grid')) {
+                    // Очищаем трек слайдера
+                    servicesTrack.innerHTML = '';
+                    
+                    // Создаем новые слайды для каждой карточки
+                    serviceCards.forEach((card) => {
+                        const slide = document.createElement('div');
+                        slide.className = 'services__slide';
+                        slide.appendChild(card.cloneNode(true));
+                        servicesTrack.appendChild(slide);
+                    });
+                }
+            } else {
+                // Для десктопной версии возвращаем 3 слайда с сеткой
+                totalSlides = 3;
+                
+                // Если текущий вид - отдельные карточки, восстанавливаем оригинальную структуру
+                if (!document.querySelector('.services__slide .services__grid')) {
+                    // Здесь должен быть код для восстановления исходной структуры
+                    // (этот код будет выполняться при переходе с мобильной на десктопную версию)
+                    // Для простоты можно просто перезагрузить страницу
+                    if (window.innerWidth > 960) {
+                        location.reload();
+                    }
+                }
+            }
+            
+            // Сбрасываем текущий слайд
+            currentSlide = 0;
+            updateSlider();
+        }
 
         function updateSlider() {
+            // Используем 100% для каждого слайда, чтобы они не перекрывались
             servicesTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
             
             // Обновляем состояние кнопок
@@ -422,8 +466,11 @@
             }
         });
 
-        // Инициализация слайдера
-        updateSlider();
+        // Отслеживаем изменение размера окна
+        window.addEventListener('resize', checkServicesSliderMode);
+
+        // Инициализация слайдера при загрузке страницы
+        checkServicesSliderMode();
 
         // Слайдер проектов
         const projectsTrack = document.querySelector('.projects__track');

@@ -696,7 +696,6 @@ ul {
     }
 
     .service-card {
-        /* width: calc(33.33% - 14px); */
         border-radius: 32px;
     }
 
@@ -759,7 +758,6 @@ ul {
 
     /* О нас */
     .about__content {
-        grid-template-columns: 422px 422px;
         gap: 60px;
     }
 
@@ -778,7 +776,7 @@ ul {
     }
 
     .contact-form__submit {
-        padding: 18.75px 6.25px;
+        padding: 10px 22.5px;
         font-size: 12.5px;
         border-radius: 37.5px;
     }
@@ -808,61 +806,232 @@ ul {
         font-size: 12.5px;
         border-radius: 40px;
     }
+
+    .social {
+        margin-bottom: 48px;
+    }
+
+    .social img {
+        width: 32px;
+        height: 32px;
+    }
 }
 
-/* Адаптив для мобильных */
-@media (max-width: 768px) {
+/* Адаптив для 960px */
+@media (max-width: 960px) {
     .container {
-        padding: 0 20px;
+        max-width: 960px;
+        padding: 0 40px;
     }
-    
+
+    /* Хедер и главный экран */
     .hero {
-        padding: 15px 20px 0;
+        padding: 3px 40px 0;
     }
-    
+
     .hero__background {
-        left: 20px;
-        right: 20px;
-        border-radius: 0 0 16px 0;
+        height: 625px;
+        top: 15px;
+        left: 40px;
+        right: 40px;
+        border-radius: 20px;
     }
-    
+
+    .hero__wrapper {
+        height: 637.5px;
+    }
+
     .header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 0;
-        margin-bottom: 300px;
+        margin-top: 53px;
+        height: 50px;
     }
-    
+
+    .header__logo .logo__image {
+        width: 106px;
+        height: 35px;
+    }
+
     .header__nav {
-        padding: 15px 20px;
+        padding: 12.5px 25px;
     }
-    
+
     .nav__list {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        gap: 20px;
     }
-    
+
+    .nav__link {
+        font-size: 12.5px;
+    }
+
+    .header__contact-btn {
+        padding: 12.5px 25px;
+        font-size: 12.5px;
+    }
+
     .hero__title {
+        bottom: 10px;
+        left: 17px;
         font-size: 48px;
     }
-    
+
     .hero__info {
-        position: static;
-        margin-top: 30px;
+        bottom: 0;
+        right: 0;
+        width: 373px;
+        font-size: 13px;
+        border-radius: 20px 0 20px 0;
     }
-    
-    .hero__subtitle,
+
+    .hero__subtitle {
+        font-size: 13px;
+    }
+
     .hero__description {
+        font-size: 13px;
+    }
+
+    /* Секция услуг */
+    .section-title {
+        font-size: 30px;
+    }
+
+    .services, .projects, .about {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    /* Изменение слайдера услуг для 960px - каждая карточка теперь отдельный слайд */
+    .services__slider {
+        overflow: hidden;
+        position: relative;
         width: 100%;
     }
     
-    .section-title {
-        font-size: 32px;
+    .services__track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
     }
     
-    .footer__content {
-        flex-direction: column;
-        gap: 30px;
+    .services__slide {
+        /* Каждый слайд занимает 100% ширины контейнера */
+        min-width: 100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .services__grid {
+        /* Отключаем grid для отображения одной карточки в слайде */
+        display: block;
+    }
+
+    .service-card {
+        /* Каждая карточка занимает весь слайд */
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .service-card__content,
+    #building_section .service-card__content {
+        bottom: -1px;
+        right: auto;
+        left: 0;
+        border-radius: 0 20px 0 20px;
+    }
+
+    /* Устанавливаем одинаковый размер для всех изображений услуг */
+    .service-card__image,
+    .service-card__image--1,
+    .service-card__image--2,
+    .service-card__image--3,
+    .service-card__image--4,
+    .service-card__image--5,
+    .service-card__image--6,
+    .service-card__image--7 {
+        height: 520px;
+        border-radius: 20px;
+    }
+
+    .service-card__title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .service-card__text {
+        font-size: 12px;
+        min-width: 300px;
+    }
+
+    /* Проекты */
+    .project-card {
+        height: 531px;
+        border-radius: 20px;
+    }
+
+    .project-card__title {
+        font-size: 40px;
+        left: 23px;
+        bottom: 40px;
+    }
+
+    .project-card__details-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .project-card__details-column p {
+        font-size: 14px;
+    }
+
+    /* О нас */
+    .about__content {
+        gap: 40px;
+    }
+
+    .about__subtitle {
+        font-size: 15px;
+    }
+
+    .about__description {
+        font-size: 12.5px;
+    }
+
+    .about__content {
+        margin-bottom: 16.5px;
+    }
+
+    .social {
+        margin-bottom: 88px;
+    }
+
+    /* Форма */
+    .contact-form__input {
+        padding: 10px 22.5px;
+        font-size: 12.5px;
+    }
+
+    .contact-form__submit {
+        padding: 10px 22.5px;
+        font-size: 12.5px;
+    }
+
+    /* Футер */
+    .footer {
+        padding: 29px 0;
+    }
+
+    .footer__logo .logo__image {
+        width: 130px;
+        height: 41px;
+    }
+
+    .footer__location {
+        font-size: 15px;
     }
 }
