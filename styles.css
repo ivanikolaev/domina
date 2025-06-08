@@ -584,32 +584,229 @@ ul {
     height: 59px;
 }
 
-/* Адаптив для планшетов */
+/* Адаптив для 1024px */
 @media (max-width: 1024px) {
     .container {
+        max-width: 1024px;
         padding: 0 40px;
     }
-    
+
+    /* Хедер и главный экран */
     .hero {
-        padding: 15px 40px 0;
+        padding: 3px 40px 0;
     }
-    
+
     .hero__background {
+        height: 625px;
+        top: 15px;
         left: 40px;
         right: 40px;
+        border-radius: 32px;
+    }
+
+    .hero__wrapper {
+        height: 637.5px;
+    }
+
+    .header {
+        margin-top: 53px;
+        height: 50px;
+        padding: 0 15px;
+    }
+
+    .header__logo .logo__image {
+        width: 130px;
+        height: 38px;
+    }
+
+    .header__nav {
+        padding: 12.5px 25px;
+        border-radius: 40px;
+        backdrop-filter: blur(10.2px);
+    }
+
+    .nav__list {
+        gap: 20px;
+    }
+
+    .nav__link {
+        font-size: 12.5px;
+    }
+
+    .header__contact-btn {
+        padding: 12.5px 25px;
+        font-size: 12.5px;
+        border-radius: 40px;
+        backdrop-filter: blur(5.6px);
     }
     
     .hero__title {
-        font-size: 72px;
+        bottom: 10px;
+        left: 17px;
+        font-size: 60px;
+        line-height: 1.27em;
+    }
+
+    .hero__info {
+        bottom: 0;
+        right: 0;
+        padding: 20px 25px;
+        width: 373px;
+        gap: 9px;
+        font-size: 15px;
+    }
+
+    .hero__subtitle {
+        font-size: 15px;
+        line-height: 1.22;
+        color: #271906;
+    }
+
+    .hero__description {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.22;
+        color: #222B0A;
+    }
+
+    /* Секция услуг */
+    .section-title {
+        font-size: 30px;
+    }
+
+    .services, .projects, .about {
+        padding: 40px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .arrow-btn {
+        width: 26px;
+        height: 26px;
+        border-radius: 10px;
+        padding: 7.5px 10.625px;
     }
     
+    /* Сетка услуг */
     .services__grid {
-        grid-template-columns: 1fr;
+        gap: 20px;
+        grid-template-rows: 250px 250px;
+    }
+
+    .service-card {
+        /* width: calc(33.33% - 14px); */
+        border-radius: 32px;
+    }
+
+    .service-card__image,
+    .service-card__image--2,
+    .service-card__image--3 {
+        height: 250px;
+    }
+
+    .service-card__image--1,
+    .service-card__image--4,
+    .service-card__image--5,
+    .service-card__image--6,
+    .service-card__image--7 {
+        height: 520px;
+    }
+
+    .service-card__title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        line-height: 1.22;
+    }
+
+    .service-card__text {
+        font-size: 10px;
+        line-height: 1.22;
+        min-width: auto;
+        max-width: 250px;
+        min-width: 200px;
     }
     
+    .service-card__content {
+        padding: 15px;
+    }
+    
+    /* Проекты */
+    .project-card {
+        height: 531px;
+    }
+
+    .project-card__title {
+        font-size: 40px;
+        left: 23px;
+        bottom: 40px;
+    }
+
+    .project-card__details-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .project-card__details-column {
+        margin-bottom: 30px;
+    }
+
+    .project-card__details-column p {
+        font-size: 14px;
+    }
+
+    /* О нас */
     .about__content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 422px 422px;
         gap: 60px;
+    }
+
+    .about__subtitle {
+        font-size: 15px;
+    }
+
+    .about__description {
+        font-size: 12.5px;
+    }
+
+    .contact-form__input {
+        padding: 10px 22.5px;
+        font-size: 12.5px;
+        border-radius: 28.75px;
+    }
+
+    .contact-form__submit {
+        padding: 18.75px 6.25px;
+        font-size: 12.5px;
+        border-radius: 37.5px;
+    }
+
+    /* Социальные сети */
+    .social__link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Футер */
+    .footer {
+        padding: 29px 0;
+    }
+
+    .footer__logo .logo__image {
+        width: 130px;
+        height: 41px;
+    }
+
+    .footer__location {
+        font-size: 15px;
+    }
+
+    .footer__contact-btn {
+        padding: 12.5px 25px;
+        font-size: 12.5px;
+        border-radius: 40px;
     }
 }
 
