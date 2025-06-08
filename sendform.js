@@ -1,11 +1,11 @@
 document.querySelector('.contact-form__submit').addEventListener('click', function (e) {
-    e.preventDefault(); // предотвращаем стандартное поведение формы
+    e.preventDefault();
 
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
 
-    const chat_id = '793756038'; 
-    const token = '8179820867:AAH62HXRTYn2mgMfQ0m-JXcn6UjOsglVmjs'; // токен вашего бота
+    const chat_id = '6456698721'; 
+    const token = '8179820867:AAH62HXRTYn2mgMfQ0m-JXcn6UjOsglVmjs';
     const text = `Имя: ${name}\nТелефон: ${phone}`;
 
     fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
